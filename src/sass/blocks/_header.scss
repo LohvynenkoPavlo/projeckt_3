@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+        width: 250px;
+        img {
+            width: 100%;
+        }
+    }
+    &__official {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+        color: #fff;
+        span {
+            display: block;
+            line-height: 29px;
+            font-weight: 500;
+            font-size: 18px;
+            text-align: center;
+            color: #fff;
+        }
+    }
+    &__phone {
+        display: block;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-weight: 700;
+        text-align: right;
+        text-decoration: none; 
+        &:hover {
+            color: black;
+            text-decoration: none;
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
