@@ -121,5 +121,24 @@ $(document).ready(function(){
     validateForms('#consultation form');
     validateForms('#order form');
 
+    $('form').submit(function(e){
+        e.preventDefault();
 
+        if (!$(this).valid()){
+            return;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function(){
+            $(this).find("imput").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay ,#thanks').fadeIn('slow');
+
+            $('form').trigger('reser');  
+        });
+        return false
+    })
 });
