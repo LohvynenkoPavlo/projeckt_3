@@ -48,6 +48,7 @@
 
     }
     &-item {
+        position: relative;
         overflow: hidden;
         width: 303px;
         min-height: 442px;
@@ -133,10 +134,13 @@
             transition: 0.5s all;
             padding-left: 19px;
             margin-bottom: 0;
-            list-style-type: none;
+            
             &_active {
                 transform: translateX(-100%);
                 margin-left: 0px;
+            }
+            ul {
+                padding: 0;
             }
             li {
                 position: relative;
@@ -144,6 +148,8 @@
                 font-size: 14px;
                 font-weight: 300;
                 margin-bottom: 20px;
+                padding: 0;
+                list-style-type: none;
                 &:before {
                     content: '';
                     position: absolute;
