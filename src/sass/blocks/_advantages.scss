@@ -21,6 +21,18 @@
         line-height: 18px;
         text-align: center;
     }
+    &__icon {
+        &_animaited {
+            animation:heardead 2s ease infinite;
+            // animation-name: heardead;
+            // animation-duration: 2s;
+            // animation-timing-function: ease;
+            // animation-iteration-count: infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
     &_big {
         color: rgb(13, 13, 13);
         font-size: 18px;
